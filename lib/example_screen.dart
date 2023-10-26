@@ -9,7 +9,7 @@ class ExampleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Page $label"),
+        title: Text(label),
       ),
       body: Center(
           child: Text(
