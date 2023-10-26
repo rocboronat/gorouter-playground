@@ -37,5 +37,21 @@ final goRouter = GoRouter(
         ),
       ],
     ),
+    GoRoute(
+      path: '/a',
+      builder: (context, state) => const ExampleScreen(label: "A"),
+      routes: [
+        GoRoute(
+          path: 'b',
+          builder: (context, state) => const ExampleScreen(label: "B"),
+          routes: [
+            GoRoute(
+              path: 'c',
+              builder: (context, state) => const ExampleScreen(label: "C"),
+            ),
+          ],
+        ),
+      ],
+    ),
   ],
 );
